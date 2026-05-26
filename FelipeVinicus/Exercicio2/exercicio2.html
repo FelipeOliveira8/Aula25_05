@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <style>
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+        table {
+            margin-top: 20px;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 600px;
+        }
+        th {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+        .form-row label {
+            margin-right: 5px;
+        }
+        .form-row input[type="text"] {
+            margin-right: 15px;
+        }
+        .radio-group {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Produtos</h1>
+    
+    <div class="form-row">
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" name="nomeProduto">
+        
+        <label for="estoqueProduto">Estoque:</label>
+        <input type="text" id="estoqueProduto" name="estoqueProduto" size="10">
+        
+        <button type="button" id="btnSalvar">Salvar Produto</button>
+    </div>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th style="width: 50px;">ID</th>
+                <th>Produto</th>
+                <th>Qtde Estoque</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela"></tbody>
+    </table>
+
+    <h2>Adicionar/Retirar Estoque</h2>
+    
+    <div class="form-row">
+        <label for="idAcao">Id do produto:</label>
+        <input type="text" id="idAcao" name="idAcao" size="10">
+        
+        <label for="qtdAcao">Quantidade:</label>
+        <input type="text" id="qtdAcao" name="qtdAcao" size="10">
+    </div>
+
+    <div class="radio-group">
+        <input type="radio" id="radioAdicionar" name="tipoAcao" value="adicionar" checked>
+        <label for="radioAdicionar">Adicionar</label>
+        
+        <input type="radio" id="radioRemover" name="tipoAcao" value="remover">
+        <label for="radioRemover">Remover</label>
+    </div>
+
+    <button type="button" id="btnConfirmar">Confirmar</button>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
